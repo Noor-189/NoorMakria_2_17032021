@@ -1,0 +1,11 @@
+body, ::before, ::after {
+    box-sizing: border-box;
+}
+#container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+}
