@@ -1,5 +1,7 @@
-body, ::before, ::after {
+*, ::before, ::after {
     box-sizing: border-box;
+    margin: 0;
+    pa
 }
 #container {
     width: 95%;
@@ -9,3 +11,36 @@ body, ::before, ::after {
 body {
     font-family: Raleway, sans-serif;
 }
+
+/* header */
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ #logo {
+     width: 90px;
+ }
+
+ /* nav */
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li:nth-child(3) a {
+    color:  #0065FC;
+    font-weight: bold;
+} 
+nav ul li {
+     list-style: none;
+     display: inline-block;
+     padding: 20px 25px;
+     font-size: 1em;
+ }
+ nav ul li:hover {
+     color: lightskyblue;
+     border-top: 1px solid #0065FC;
+} 
+
