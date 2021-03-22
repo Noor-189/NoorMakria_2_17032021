@@ -102,9 +102,9 @@ nav ul li:hover a {
     text-align: center;
     padding-bottom: 20px;
 }
-#filters > h3 { /*h3 "Filtres" qui est le premier h3 contenu dans filters"*/
+#filters h3:first-child { /*h3 "Filtres" qui est le premier h3 contenu dans filters"*/
     padding-right: 30px;
-    line-height: 40px; /*centrer verticalement une seule ligne de texte*/
+    line-height: 40px; /*centrer verticalement une seule ligne de texte = hauteur de l'élément*/
     text-align: center;
 }
 .filter {
@@ -158,3 +158,61 @@ nav ul li:hover a {
 }
 
 
+/* section hosting in Marseille */
+#marseilleHosting {
+    background-color: #F2F2F2;
+    padding: 30px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+#marseilleHosting > h2 {
+    padding-bottom: 25px;
+}
+.hostingCard {
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.hostingCard a {
+    text-decoration: none;
+    color: black;
+}
+.hostingCard:hover {
+    cursor: pointer;
+}
+.hostingCard p:first-child { /*Container de l'image*/
+    padding: 5px;
+}
+.hostingCard img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.hostingCardPresentation, .stars{
+    padding-left: 15px;
+}
+.hostingCardPresentation h3, .hostingCardPresentation p, .stars {
+    padding-bottom: 5px;
+}
+.stars i {
+    font-size: 13px;
+}
+#marseilleHosting h3 a { /*Le lien "Afficher plus"*/
+    text-decoration: none;
+    color: black;
+}
+.stars i {
+    color: #0065FC;
+}
+.hostingCard:nth-child(1) .stars i:nth-child(5) { /*Auberge la Cannebière*/
+    color: #F2F2F2;
+}
+.hostingCard:nth-child(3) .stars i:nth-child(5) { /*Hotel les mouettes*/
+    color: #F2F2F2;
+}
+.hostingCard:nth-child(4) .stars i:nth-child(4),
+.hostingCard:nth-child(4) .stars i:nth-child(5) { /*Hôtel de la mer*/
+    color: #F2F2F2;
+}
+.hostingCard:nth-child(5) .stars i:nth-child(5) { /*Auberge Le panier*/
+    color: #F2F2F2;
+}
