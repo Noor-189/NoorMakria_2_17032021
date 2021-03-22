@@ -165,7 +165,7 @@ nav ul li:hover a {
     border-radius: 15px;
     margin-bottom: 30px;
 }
-#marseilleHosting > h2 {
+#marseilleHosting h2:first-child {
     padding-bottom: 25px;
 }
 .hostingCard {
@@ -177,17 +177,20 @@ nav ul li:hover a {
     text-decoration: none;
     color: black;
 }
-.hostingCard:hover {
+.hostingCard:hover, .popularCard:hover {
     cursor: pointer;
 }
 .hostingCard p:first-child { /*Container de l'image*/
     padding: 5px;
+    height: 220px;
+    overflow: hidden;
 }
 .hostingCard img {
     width: 100%;
     border-radius: 15px 15px 0 0;
+    object-fit: cover;
 }
-.hostingCardPresentation, .stars{
+.hostingCardPresentation, .hostingCard .stars{
     padding-left: 15px;
 }
 .hostingCardPresentation h3, .hostingCardPresentation p, .stars {
@@ -215,4 +218,77 @@ nav ul li:hover a {
 }
 .hostingCard:nth-child(5) .stars i:nth-child(5) { /*Auberge Le panier*/
     color: #F2F2F2;
+}
+
+/* Section popular Hosting */
+#popularHosting {
+    background-color: #F2F2F2;
+    padding: 30px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+#popularTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+#popularTitle i {
+    font-size: 20px;
+}
+.popularCard {
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.popularCard a {
+    text-decoration: none;
+    color: black;
+}
+.popularCard a {
+    display: flex;
+}
+.popularCard p:first-child {
+    padding: 5px;
+    height: 120px;
+    width: 110px;
+}
+.popularCard img {
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.flex-popularCardPresentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: crimson; */
+    padding: 10px 10px;
+}
+.flex-popularCardPresentation .popularCardPresentation {
+    /* background-color: darkkhaki; */
+}
+.flex-popularCardPresentation .stars {
+    /* background-color: darkturquoise; */
+}
+
+/*Mise en page flexbox hosting section*/
+#hosting {
+    display: flex;
+    justify-content: space-between;
+}
+.hostingCardsGroup {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hostingCard {
+    flex: 0 0 31.5%;
+}
+#marseilleHosting {
+    flex-basis: 70%;
+}
+#popularHosting {
+    flex-basis: 27%;
 }
