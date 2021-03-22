@@ -175,7 +175,6 @@ nav li:hover a {
 /* section hosting in Marseille */
 #marseilleHosting {
     background-color: #F2F2F2;
-    padding: 30px 30px;
     border-radius: 15px;
     margin-bottom: 30px;
 }
@@ -196,8 +195,7 @@ nav li:hover a {
 }
 .hostingCard p:first-child { /*Container de l'image*/
     padding: 5px;
-    height: 220px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .hostingCard img {
     width: 100%;
@@ -237,7 +235,6 @@ nav li:hover a {
 /* Section popular Hosting */
 #popularHosting {
     background-color: #F2F2F2;
-    padding: 30px 30px;
     border-radius: 15px;
     margin-bottom: 30px;
 }
@@ -249,6 +246,7 @@ nav li:hover a {
 }
 #popularTitle i {
     font-size: 20px;
+    padding-left: 10px;
 }
 .popularCard {
     background-color: white;
@@ -259,32 +257,29 @@ nav li:hover a {
     text-decoration: none;
     color: black;
 }
-.popularCard a {
+.popularCard a { /*image et texte cote à cote*/
     display: flex;
 }
-.popularCard p:first-child {
+.popularCard p:first-child { /*contenant des cartes populaires*/
     padding: 5px;
     height: 120px;
     width: 110px;
 }
-.popularCard img {
+.popularCard img { /*images populaires*/
     border-radius: 15px 0 0 15px;
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
-.flex-popularCardPresentation {
+.flex-popularCardPresentation { /*contenu des cartes populaires*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: crimson; */
     padding: 10px 10px;
 }
-.flex-popularCardPresentation .popularCardPresentation {
-    /* background-color: darkkhaki; */
-}
-.flex-popularCardPresentation .stars {
-    /* background-color: darkturquoise; */
+.popularCard:nth-child(2) .stars i:nth-child(5), /*Hôtel Tout bleu et Blanc et */
+.popularCard:nth-child(3) .stars i:nth-child(5) { /*Au coeur de l'eau Chambres d'hôtes*/
+    color: #F2F2F2;
 }
 
 /*Mise en page flexbox hosting section*/
@@ -308,9 +303,6 @@ nav li:hover a {
 }
 
 /*Section Activities in Marseille*/
-#activities {
-    padding: 30px;
-}
 #activities h2 {
     margin: 20px 0 15px 0;
 }
@@ -365,9 +357,12 @@ footer a {
     padding-bottom: 15px;
 }
 
+/* Padding des sections */
+#marseilleHosting, #popularHosting, #activities {
+    padding: 25px;
+}
 
 /* Media queries */
-
 @media screen and (max-width: 768px) {
     #container {
     }
@@ -406,6 +401,7 @@ footer a {
     }
     footer {
         display: block;
+        padding-left: 30px;
     }
     .columnFooter {
         width: 100%;
@@ -417,5 +413,14 @@ footer a {
     #hosting {
         display: flex;
         flex-direction: column-reverse;
+    }
+    .filter {
+        margin-bottom: 10px;
+    }
+    #marseilleHosting, #popularHosting, #activities {
+        padding: 15px;
+    }
+    #popularHosting {
+
     }
 }
