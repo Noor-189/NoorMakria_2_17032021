@@ -1,6 +1,7 @@
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 #container {
     width: 95%;
@@ -19,6 +20,7 @@ h3 {
 p {
     font-weight: lighter;
 }
+
 /* header */
  header {
      display: flex;
@@ -28,6 +30,7 @@ p {
  #logo {
      width: 90px;
  }
+
  /* nav */
 nav ul li a {
     text-decoration: none;
@@ -47,9 +50,11 @@ nav ul li:hover {
      color: #0065FC;
      border-top: 1px solid #0065FC;
 }
-nav ul li a:hover {
-    color: #0065FC;
+nav ul li:hover a { 
+    color: #0065FC; 
+/*Lorsque le li est hover, le lien a à l'intérieur devient bleu*/
 }
+
 /* main: search section - input*/
 #searchPresentation {
     padding-top: 25px;
@@ -90,14 +95,17 @@ nav ul li a:hover {
 .fa-map-marker-alt {
     font-size: 15px;
 }
+
 /* main: search section - filters */
 #filters {
     display: flex; 
     text-align: center;
     padding-bottom: 20px;
 }
-#filters h3 {
+#filters > h3 { /*h3 "Filtres" qui est le premier h3 contenu dans filters"*/
     padding-right: 30px;
+    line-height: 40px; /*centrer verticalement une seule ligne de texte*/
+    text-align: center;
 }
 .filter {
     display: flex;
@@ -115,7 +123,7 @@ nav ul li a:hover {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex; /*Centrage des icones dans cercle bleu*/
     align-items: center;
     justify-content: center;
 }
@@ -123,30 +131,30 @@ nav ul li a:hover {
     color: #0065FC;
 }
 .positionIconFilter {
-    position: absolute;
+    position: absolute; /*par rapport au titre h3 contenu dans la même div filter*/
 }
+
 /* main: search section - info */
 #information {
     display: flex;
     margin-bottom: 30px;
-    text-align: center;
 }
-#infoIcon {
-    padding-right: 10px;
-    display: flex;
+.infoIcon {
+    border: 2px solid #F1F1F1;
+    border-radius: 50%;    
+    width: 23px;
+    height: 23px;    
+    display: flex; /*Centrage de l'icone i dans le cercle*/
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 .fa-info {
-    border: 2px solid #F1F1F1;
-    border-radius: 50%;
     color: #0065FC;
     font-size: 10px;
-    width: 23px;
-    height: 23px;
-    vertical-align: middle;
 }
 #infoText {
+    line-height: 23px;
 }
 
 
