@@ -4,7 +4,7 @@
     padding: 0;
 }
 #container {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 body {
@@ -85,6 +85,9 @@ nav li:hover a {
     padding: 0 15px;
     border-radius: 0 10px 10px 0;
 }
+#searchIcon {
+    display: none;
+}
 #inputSearch input[type="text"]::placeholder {
     font-weight: bolder;
     font-size: 1em;
@@ -103,13 +106,11 @@ nav li:hover a {
 #filters { /*toute la div filtres*/
     display: flex;
     flex-wrap: wrap; 
-    text-align: center;
     padding-bottom: 20px;
 }
-#filters h3:first-child { /*h3 "Filtres" qui est le premier h3 contenu dans filters"*/
+#filtersTitle { /*h3 "Filtres" qui est le premier h3 contenu dans filters"*/
     padding-right: 30px;
     line-height: 40px; /*centrer verticalement une seule ligne de texte = hauteur de l'élément*/
-    text-align: center;
 }
 .filter { /*div contenant l'intitulé du filtre*/
     display: flex;
@@ -307,6 +308,9 @@ nav li:hover a {
 }
 
 /*Section Activities in Marseille*/
+#activities {
+    padding: 30px;
+}
 #activities h2 {
     margin: 20px 0 15px 0;
 }
@@ -366,13 +370,8 @@ footer a {
 
 /* Media queries */
 
-/* @media screen and (min-width: 768) and (max-width: 991px) {
-
-} */
-
-@media screen and (min-width: 0) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #container {
-        background-color: cornsilk;
     }
     #navLinks {
         display: flex;
@@ -380,5 +379,44 @@ footer a {
         justify-content: stretch;
         align-items: stretch;
         width: 100%;
+    }
+    #filtersTitle {
+        flex-basis: 100%;
+    }
+    .filter {
+        margin-bottom: 10px;
+    }
+    #hosting {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #marseilleHosting {
+        background-color: white;        
+        border-radius: 0;
+    }
+    .hostingCardsGroup {
+        display: block;
+    }
+    .hostingCard {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .activitiesGroup {
+        display: block;
+    }
+    #popularHosting {
+        border-radius: 0;
+    }
+    footer {
+        display: block;
+    }
+    .columnFooter {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    #container {
+        background-color: red;
     }
 }
