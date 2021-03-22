@@ -292,3 +292,42 @@ nav ul li:hover a {
 #popularHosting {
     flex-basis: 27%;
 }
+
+/*Section Activities in Marseille*/
+#activities h2 {
+    margin: 20px 0 15px 0;
+}
+.activityCard {
+    background-color: white;
+}
+.activityCard a {
+    text-decoration: none;
+    color: black;
+}
+.activityCard p:first-child, .activityCard img {
+}
+.activityCard {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.activityCard img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+.activityCard h3 {
+    padding: 15px 0 15px 15px;
+}
+
+/* Mise en page de la section activities */
+.activitiesGroup {
+    display: flex;
+    justify-content: space-between;
+}
+.col {
+    flex-basis: 23%;
+}
+.col2 div:first-child {
+}
+
+/**/
