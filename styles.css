@@ -41,10 +41,6 @@ nav li {
     padding: 20px 25px;
     font-size: 1em;
 }
-nav li a {
-    text-decoration: none;
-    color: black;
-}
 #inscriptionLink a {
     color:  #0065FC;
     font-weight: bold;
@@ -185,22 +181,22 @@ nav li:hover a {
     background-color: white;
     border-radius: 15px;
     margin-bottom: 20px;
-}
-.hostingCard a {
-    text-decoration: none;
-    color: black;
+    height: 280px;
 }
 .hostingCard:hover, .popularCard:hover {
     cursor: pointer;
 }
 .hostingCard p:first-child { /*Container de l'image*/
     padding: 5px;
+    height: 200px;
     /* overflow: hidden; */
 }
 .hostingCard img {
     width: 100%;
+    height: 100%;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
+    object-position: center;
 }
 .hostingCardPresentation, .hostingCard .stars{
     padding-left: 15px;
@@ -210,10 +206,6 @@ nav li:hover a {
 }
 .stars i {
     font-size: 13px;
-}
-#marseilleHosting h3 a { /*Le lien "Afficher plus"*/
-    text-decoration: none;
-    color: black;
 }
 .stars i {
     color: #0065FC;
@@ -253,21 +245,18 @@ nav li:hover a {
     border-radius: 15px;
     margin-bottom: 20px;
 }
-.popularCard a {
-    text-decoration: none;
-    color: black;
-}
 .popularCard a { /*image et texte cote à cote*/
     display: flex;
 }
 .popularCard p:first-child { /*contenant des cartes populaires*/
     padding: 5px;
     height: 120px;
-    width: 110px;
+    width: 120px;
 }
 .popularCard img { /*images populaires*/
     border-radius: 15px 0 0 15px;
     object-fit: cover;
+    object-position: center;
     height: 100%;
     width: 100%;
 }
@@ -291,6 +280,7 @@ nav li:hover a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    height: auto;
 }
 .hostingCard {
     flex: 0 0 31.5%;
@@ -303,26 +293,39 @@ nav li:hover a {
 }
 
 /*Section Activities in Marseille*/
+#activitiesGroup {
+    height: 300px;
+}
 #activities h2 {
     margin: 20px 0 15px 0;
 }
 .activityCard {
     background-color: white;
-}
-.activityCard a {
-    text-decoration: none;
-    color: black;
-}
-.activityCard p:first-child, .activityCard img {
-}
-.activityCard {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 15px;
     margin-bottom: 15px;
 }
+.activityCard1 p, .activityCard4 p {
+    height: 265px;
+}
+.activityCard2 p {
+    height: 120px;
+}
+.activityCard3 p {
+    height: 80px;
+}
+.activityCard5 p {
+    height: 120px;
+}
+.activityCard6 p {
+    height: 80px;
+}
 .activityCard img {
     border-radius: 15px 15px 0 0;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .activityCard h3 {
     padding: 15px 0 15px 15px;
@@ -332,11 +335,10 @@ nav li:hover a {
 .activitiesGroup {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .col {
     flex-basis: 23%;
-}
-.col2 div:first-child {
 }
 
 /* Footer */
@@ -346,10 +348,6 @@ footer {
     justify-content: space-around;
     padding: 30px 0;
 }
-footer a {
-    text-decoration: none;
-    color: black;
-}
 .columnFooter h3 {
     padding-bottom: 20px;
 }
@@ -357,9 +355,16 @@ footer a {
     padding-bottom: 15px;
 }
 
-/* Padding des sections */
+/* Padding des grandes sections */
 #marseilleHosting, #popularHosting, #activities {
     padding: 25px;
+}
+
+/* enlever styles par défaut des liens */
+.hostingCard a, nav li a, #marseilleHosting h3 a, 
+.popularCard a, .activityCard a, footer a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Media queries */
@@ -406,7 +411,9 @@ footer a {
     .columnFooter {
         width: 100%;
     }
-
+    .activityCard p, .hostingCard p:first-child {
+        height: 200px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -421,6 +428,11 @@ footer a {
         padding: 15px;
     }
     #popularHosting {
-
+    }
+    .hostingCard {
+        flex-basis: 48.5%;
+    }
+    .col {
+        flex-basis: 48.5%;
     }
 }
