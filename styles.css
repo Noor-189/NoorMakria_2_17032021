@@ -21,7 +21,7 @@ p {
     font-weight: lighter;
 }
 
-/* header */
+/* --------- header --------- */
  nav {
      display: flex;
      justify-content: space-between;
@@ -31,7 +31,7 @@ p {
      width: 90px;
  }
 
- /* nav */
+ /* --------- nav --------- */
 #navLinks, #sectionLinks {
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +54,7 @@ nav li:hover a {
 /*Lorsque le li est hover, le lien a à l'intérieur devient bleu*/
 }
 
-/* main: search section - input*/
+/*  --------- search section - input --------- */
 #searchPresentation {
     padding-top: 25px;
     font-weight: bold;
@@ -98,7 +98,7 @@ nav li:hover a {
     font-size: 15px;
 }
 
-/* main: search section - filters */
+/* --------- search section - filters --------- */
 #filters { /*toute la div filtres*/
     display: flex;
     flex-wrap: wrap; 
@@ -144,7 +144,7 @@ nav li:hover a {
 }
 
 
-/* main: search section - info */
+/* --------- search section - info --------- */
 #information {
     display: flex;
     margin-bottom: 30px;
@@ -168,7 +168,7 @@ nav li:hover a {
 }
 
 
-/* section hosting in Marseille */
+/* --------- section hosting in Marseille --------- */
 #marseilleHosting {
     background-color: #F2F2F2;
     border-radius: 15px;
@@ -224,7 +224,7 @@ nav li:hover a {
     color: #F2F2F2;
 }
 
-/* Section popular Hosting */
+/* --------- Section popular Hosting --------- */
 #popularHosting {
     background-color: #F2F2F2;
     border-radius: 15px;
@@ -243,7 +243,7 @@ nav li:hover a {
 .popularCard {
     background-color: white;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
 }
 .popularCard a { /*image et texte cote à cote*/
     display: flex;
@@ -251,7 +251,7 @@ nav li:hover a {
 .popularCard p:first-child { /*contenant des cartes populaires*/
     padding: 5px;
     height: 120px;
-    width: 120px;
+    width: 130px;
 }
 .popularCard img { /*images populaires*/
     border-radius: 15px 0 0 15px;
@@ -259,6 +259,9 @@ nav li:hover a {
     object-position: center;
     height: 100%;
     width: 100%;
+}
+.popularCardPresentation h3 {
+    padding-bottom: 5px;
 }
 .flex-popularCardPresentation { /*contenu des cartes populaires*/
     display: flex;
@@ -271,7 +274,7 @@ nav li:hover a {
     color: #F2F2F2;
 }
 
-/*Mise en page flexbox hosting section*/
+/* --------- Mise en page flexbox hosting section --------- */
 #hosting {
     display: flex;
     justify-content: space-between;
@@ -286,13 +289,13 @@ nav li:hover a {
     flex: 0 0 31.5%;
 }
 #marseilleHosting {
-    flex-basis: 70%;
+    flex-basis: 67%;
 }
 #popularHosting {
-    flex-basis: 27%;
+    flex-basis: 30%;
 }
 
-/*Section Activities in Marseille*/
+/* --------- Section Activities in Marseille --------- */
 #activitiesGroup {
     height: 300px;
 }
@@ -331,7 +334,7 @@ nav li:hover a {
     padding: 15px 0 15px 15px;
 }
 
-/* Mise en page de la section activities */
+/* --------- Mise en page de la section activities --------- */
 .activitiesGroup {
     display: flex;
     justify-content: space-between;
@@ -341,7 +344,7 @@ nav li:hover a {
     flex-basis: 23%;
 }
 
-/* Footer */
+/* --------- Footer --------- */
 footer {
     background-color: #F2F2F2;
     display: flex;
@@ -355,19 +358,19 @@ footer {
     padding-bottom: 15px;
 }
 
-/* Padding des grandes sections */
+/* --------- Padding des grandes sections --------- */
 #marseilleHosting, #popularHosting, #activities {
     padding: 25px;
 }
 
-/* enlever styles par défaut des liens */
+/* --------- enlever styles par défaut des liens --------- */
 .hostingCard a, nav li a, #marseilleHosting h3 a, 
 .popularCard a, .activityCard a, footer a {
     text-decoration: none;
     color: black;
 }
 
-/* Media queries */
+/* --------- Media queries --------- */
 @media screen and (max-width: 768px) {
     #container {
     }
@@ -420,6 +423,9 @@ footer {
     #hosting {
         display: flex;
         flex-direction: column-reverse;
+    }
+    .popularCard {
+        margin-bottom: 10px;
     }
     .filter {
         margin-bottom: 10px;
