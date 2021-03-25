@@ -421,9 +421,7 @@ footer .container {
         padding: 15px;
     }
     #popularHosting {
-        padding: 15px;
-    }
-    #popularHosting {
+        padding: 15px 15px 30px 15px;
     }
     .hostingCard {
         flex-basis: 47.5%;
@@ -488,7 +486,6 @@ footer .container {
     }
     #popularHosting {
         border-radius: 0;
-        padding-bottom: 30px;
     }
     footer .container{
         display: block;
