@@ -16,15 +16,15 @@
             <!-- header -->
             <header>
                 <nav>
-                    <p><img id="logo" src="images/logo/Reservia@3x.png" alt="logo"></p>
-                    <div id="navLinks">
+                    <p id="logoContainer"><img id="logo" src="images/logo/Reservia@3x.png" alt="logo"></p>
+                    <!-- <div id="navLinks"> -->
                         <ul id="sectionLinks">
                             <li><a href="#marseilleHosting">Hébergements</a></li>
                             <li><a href="#activities">Activités</a></li>                             
                         </ul>
                         <div id="inscriptionLink">
                             <li><a href="#">S'inscrire</a></li>
-                        </div>                        
+                        <!-- </div>                         -->
                     </div>
                 </nav>
             </header>
@@ -40,8 +40,8 @@
                     <div id="inputSearch">
                         <p id="locationIcon"><i class="fas fa-map-marker-alt"></i></p>
                         <input type="text" placeholder="Marseille, France">
-                        <input type="submit" value="Rechercher">
-                        <div id="searchIcon"><i class="fas fa-search"></i></div>
+                        <button class="submitButton-xl" type="submit">Rechercher</button>
+                        <button class="submitButton-xs" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                     <div id="filters">
                         <h3 id="filtersTitle">Filtres</h3>

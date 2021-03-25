@@ -23,12 +23,21 @@ p {
 
 /* --------- header --------- */
  nav {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ #logoContainer {
+    background-color: chartreuse;
  }
  #logo {
-     width: 90px;
+    width: 90px;
+ }
+ #sectionLinks {
+    background-color: aqua;
+ }
+ #inscriptionLink {
+    background-color: burlywood;
  }
 
  /* --------- nav --------- */
@@ -73,13 +82,16 @@ nav li:hover a {
     border-bottom: 1px solid #F2F2F2;
     padding: 0 20px 0 15px;
 }
-#inputSearch input[type="submit"] {
+.submitButton-xl, .submitButton-xs {
     all: unset;
     background-color: #0065FC;
     color: white;
     font-size: 0.9em;
     padding: 0 15px;
     border-radius: 0 10px 10px 0;
+}
+.submitButton-xs {
+    display: none;
 }
 #searchIcon {
     display: none;
@@ -375,7 +387,14 @@ footer {
 
 /* --------- Media queries --------- */
 @media screen and (max-width: 768px) {
-    #container {
+    .submitButton-xs {
+        display: block;
+    }
+    .submitButton-xl {
+        display: none;
+    }
+    #sectionLinks {
+        order: 1;
     }
     #navLinks {
         display: flex;
