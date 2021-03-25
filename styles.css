@@ -21,29 +21,24 @@ p {
     font-weight: lighter;
 }
 
-/* --------- header --------- */
- nav {
+/* --------- header & nav --------- */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
- #logoContainer {
-    background-color: chartreuse;
- }
- #logo {
-    width: 90px;
- }
- #sectionLinks {
-    background-color: aqua;
- }
- #inscriptionLink {
-    background-color: burlywood;
- }
-
- /* --------- nav --------- */
-#navLinks, #sectionLinks {
-    display: flex;
     flex-wrap: wrap;
+}
+#sectionLinks {
+    display: flex;
+} 
+#logoContainer {
+}
+#logo {
+    width: 100px;
+}
+#sectionLinks {
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 nav li {
     list-style: none;
@@ -54,12 +49,13 @@ nav li {
     color:  #0065FC;
     font-weight: bold;
 } 
-nav li:hover {
+nav #sectionLinks li:hover {
      color: #0065FC;
-     border-top: 1px solid #0065FC;
+     border-top: 2px solid #0065FC;
+     cursor: pointer;
 }
-nav li:hover a { 
-    color: #0065FC; 
+nav #sectionLinks li:hover a { 
+    color: #0065FC;
 /*Lorsque le li est hover, le lien a à l'intérieur devient bleu*/
 }
 
@@ -89,6 +85,7 @@ nav li:hover a {
     font-size: 0.9em;
     padding: 0 15px;
     border-radius: 0 10px 10px 0;
+    cursor: pointer;
 }
 .submitButton-xs {
     display: none;
@@ -120,11 +117,12 @@ nav li:hover a {
     padding-right: 30px;
     line-height: 40px; /*centrer verticalement une seule ligne de texte = hauteur de l'élément*/
 }
-.filter { /*div contenant l'intitulé du filtre*/
+.filter { /*div contenant l'intitulé et icone du filtre*/
     display: flex;
     height: 40px;
     margin-right: 30px;
     position: relative;
+    cursor: pointer;
 }
 .filter h3 { /*L'intitulé des filtres*/
     border: 2px solid #F1F1F1;
@@ -340,11 +338,14 @@ nav li:hover a {
     border-radius: 15px;
     margin-bottom: 15px;
 }
+.activityCard p {
+    overflow: hidden;
+}
 .activityCard1 p, .activityCard4 p {
     height: 300px;
 }
 .activityCard2 p {
-    height: 140px;
+    height: 145px;
 }
 .activityCard3 p {
     height: 80px;
@@ -353,7 +354,7 @@ nav li:hover a {
     height: 100px;
 }
 .activityCard6 p {
-    height: 120px;
+    height: 125px;
 }
 .activityCard img {
     border-radius: 15px 15px 0 0;
@@ -443,18 +444,31 @@ footer .container {
         display: none;
     }
     #sectionLinks {
-        order: 1;
-    }
-    #inscriptionLink {
-        display: block;
-    }
-    #navLinks {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: stretch;
-        align-items: stretch;
         width: 100%;
+        order: 1;
+        justify-content: space-around;
+        text-align: center;
     }
+    #sectionLinks li {
+        width: 50%;
+    }
+    #inscriptionLink, #sectionLinks {
+        justify-content: flex-end;
+    }
+    #logoContainer {
+    }
+    nav #sectionLinks li {
+        border-bottom: 2px solid #F1F1F1;
+    }
+    nav #sectionLinks li:hover {
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC;
+        border-top: none;
+   }
+    nav li:hover a { 
+       color: #0065FC; 
+   /*Lorsque le li est hover, le lien a à l'intérieur devient bleu*/
+   }
     #filtersTitle {
         flex-basis: 100%;
     }
@@ -494,6 +508,11 @@ footer .container {
     .columnFooter {
         width: 100%;
     }
+    .columnFooter:nth-child(1),
+    .columnFooter:nth-child(2) {
+        margin-bottom: 25px;
+    }
+
     .activityCard p, .hostingCard p:first-child {
         height: 150px;
     }
