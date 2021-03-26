@@ -409,7 +409,7 @@ footer .container {
 }
 
 /* --------- Media queries --------- */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1230px) {
     #hosting {
         display: flex;
         flex-direction: column-reverse;
