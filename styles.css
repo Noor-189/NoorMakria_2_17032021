@@ -73,13 +73,15 @@ nav #sectionLinks li:hover a {
     height: 75px;
 }
 #inputSearch input[type="text"] {
-    all: unset;
+    list-style-type: none;
+    border: none;
     border-top: 1px solid #F2F2F2;
     border-bottom: 1px solid #F2F2F2;
     padding: 0 20px 0 15px;
 }
 .submitButton-xl, .submitButton-xs {
-    all: unset;
+    list-style-type: none;
+    border: none;
     background-color: #0065FC;
     color: white;
     font-size: 0.9em;
