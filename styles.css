@@ -9,6 +9,7 @@
 }
 body {
     font-family: Raleway, sans-serif;
+    position: relative;
 }
 h2 {
     font-weight: bold;
@@ -390,6 +391,8 @@ nav #sectionLinks li:hover a {
 /* --------- Footer --------- */
 footer {
     background-color: #F2F2F2;
+    position: absolute;
+    width: 100%;
 }
 footer .container {
     display: flex;
