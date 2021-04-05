@@ -124,12 +124,12 @@ nav #sectionLinks li:hover a {
     cursor: pointer;
 }
 .filter h3 { /*L'intitulé des filtres*/
-    border: 2px solid #F1F1F1;
+    border: 2px solid #F2F2F2;
     border-radius: 30px;
     padding: 10px 15px 10px 50px;
 }
 .filter p { /*Le contenant des icones représentant les filtres*/
-    background-color: #DEECFF;
+    background-color: #DEEBFF;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -148,7 +148,7 @@ nav #sectionLinks li:hover a {
     transition: 0.3s;
 } 
 .filter:hover p i { /*effet hover 2 sur filtres*/
-    color: #DEECFF;
+    color: #DEEBFF;
     transition: 0.3s;
 }
 .filter:hover h3 {
@@ -162,7 +162,7 @@ nav #sectionLinks li:hover a {
     margin-bottom: 30px;
 }
 .infoIcon {
-    border: 2px solid #F1F1F1;
+    border: 2px solid #F2F2F2;
     border-radius: 50%;    
     width: 23px;
     height: 23px;    
@@ -483,7 +483,7 @@ footer .container {
     #logoContainer {
     }
     nav #sectionLinks li {
-        border-bottom: 2px solid #F1F1F1;
+        border-bottom: 2px solid #F2F2F2;
     }
     nav #sectionLinks li:hover {
         color: #0065FC;
